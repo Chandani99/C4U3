@@ -4,13 +4,17 @@ import {fetchData} from "../components/fetch.js";
 document.getElementById("navbar").innerHTML=navbar;
 
 document.getElementById("search_input").addEventListener("keypress", serachNwes);
-function serachNwes(){
+function serachNwes(event){
+    if(event.key==="Enter"){
     let query=document.getElementById("search_input").value;
     const url=`https://masai-mock-api.herokuapp.com/news?q=${query}`;
-    fetchData(url).then((res)=>{
-        localStorage.setItem("searchedNews", JSON.stringify(res));
-        window.location.href="search.html";
-    })
+    
+        fetchData(url).then((res)=>{
+            localStorage.setItem("searchedNews", JSON.stringify(res));
+            window.location.href="search.html";
+        })
+    }
+    
 }
 
 let searchedNews=JSON.parse(localStorage.getItem("searchedNews"));
