@@ -1,0 +1,55 @@
+#navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding:  10px;
+    box-sizing: border-box;
+    background-color: bisque;
+}
+#search_input{
+    width: 80%;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+#body{
+    display: flex;
+    justify-content: space-around;
+}
+#sidebar{
+    width: 10%;
+    /* border: 1px solid red; */
+}
+#sidebar>div{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    background-color: teal;
+    cursor: pointer;
+    color: white;
+}
+#results{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+
+    /* border: 1px solid red;  */
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 1px solid red;
+}
+
+#detailed_news{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
